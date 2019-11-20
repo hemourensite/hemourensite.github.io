@@ -318,6 +318,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/20/%E4%BD%BF%E7%94%A8HexoAdmin%E6%96%B0%E5%BB%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/11/20/%E4%BD%BF%E7%94%A8HexoAdmin%E6%96%B0%E5%BB%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -423,8 +433,8 @@
           
 
   
-	<div id="gitalk-container"></div>
-
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -717,22 +727,28 @@
 
 
 
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '3wB3XRTS6Nfl86jBp0I9zazo-gzGzoHsz',
+        appKey: 'Bbhhho12XSoVYQ6OvxKItu9g',
+        placeholder: '各位基友，请举手发言',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-   <script type="text/javascript">
-        var gitalk = new Gitalk({
-          clientID: '6f91c6f86b798fd0214b',
-          clientSecret: '06c54a78a7738995f035a129494736ec36dfae6d',
-          repo: 'hemourensite.github.io',
-          owner: 'hemourensite',
-          admin: ['hemourensite'],
-          id: location.pathname,
-          distractionFreeMode: 'true'
-        })
-        gitalk.render('gitalk-container')           
-       </script>
 
 
   
