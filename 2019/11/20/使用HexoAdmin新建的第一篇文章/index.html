@@ -423,6 +423,9 @@
           
 
   
+	<div id="gitalk-container"></div>
+
+  
 
 
 
@@ -714,6 +717,22 @@
 
 
 
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '6f91c6f86b798fd0214b',
+          clientSecret: '06c54a78a7738995f035a129494736ec36dfae6d',
+          repo: 'hemourensite.github.io',
+          owner: 'hemourensite',
+          admin: ['hemourensite'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
   
